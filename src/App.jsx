@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from './Navbar';
-import HeroSection from './HeroSection';
-import CuratedSelection from './CuratedSelection';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import CuratedSelection from './components/CuratedSelection';
 
 const App = () => {
   return (

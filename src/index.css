@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Inter:wght@300;400;500&display=swap');
+
+@theme {
+  --font-serif: 'Italiana', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Warmer off-white */
+  --color-white: #f0ebe1;
+  
+  /* Warmer grays (Tailwind 'stone' palette equivalents) */
+  --color-gray-300: #d6d3d1;
+  --color-gray-400: #a8a29e;
+  --color-gray-500: #78716c;
+  --color-gray-600: #57534e;
+  --color-gray-800: #292524;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: var(--color-white);
+}

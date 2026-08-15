@@ -1,4 +1,4 @@
-# Atelier Noir
+# Lastro
 
 A luxurious, high-end web application for curating rare art, iconic objects, and extraordinary pieces. Built with React, Vite, and Tailwind CSS.
 

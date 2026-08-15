@@ -6,9 +6,8 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8 py-3 md:py-4">
         {/* Left - Logo */}
         <div className="flex items-center space-x-3 md:space-x-4">
-          <h1 className="text-[#A69076] font-serif text-3xl md:text-4xl leading-none">AN</h1>
-          <div className="flex flex-col justify-center">
-            <span className="text-white text-sm md:text-lg tracking-[0.2em] uppercase font-serif leading-tight">ATELIER NOIR</span>
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-white text-sm md:text-lg tracking-[0.3em] uppercase font-serif leading-tight tracking-wider antialiased">LASTRO</h1>
             <span className="text-gray-500 text-[8px] md:text-[9px] tracking-[0.3em] uppercase mt-0.5">ART / DESIGN / LUXURY</span>
           </div>
         </div>

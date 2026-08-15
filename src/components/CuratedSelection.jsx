@@ -1,26 +1,34 @@
 import React from 'react';
+import imgCar from '../assets/placeholders/capricorn-01-zagato-17 - car.webp';
+import imgSculpture from '../assets/placeholders/The shape of Speed - Limited Edition - Formula 1 - sculpture.jpg';
+import imgWatch from '../assets/placeholders/OMEGA_310.60.42.50.99.001_meteorite - watch.jpeg';
+import imgFurniture from '../assets/placeholders/UFO TAILOR MADE - furniture.webp';
 
 const CuratedSelection = () => {
   const items = [
     {
       id: 1,
       title: 'Capricorn 01 Zagato',
-      category: 'Automotive Excellence'
+      category: 'Automotive Excellence',
+      image: imgCar
     },
     {
       id: 2,
-      title: 'The Flight',
-      category: 'Limited Edition Sculpture'
+      title: 'The Shape of Speed',
+      category: 'Limited Edition Sculpture',
+      image: imgSculpture
     },
     {
       id: 3,
-      title: 'Grand Complications',
-      category: 'Rare Timepieces'
+      title: 'Omega Meteorite',
+      category: 'Rare Timepieces',
+      image: imgWatch
     },
     {
       id: 4,
-      title: 'Iconic Design',
-      category: "Collector's Furniture"
+      title: 'UFO Tailor Made',
+      category: "Collector's Furniture",
+      image: imgFurniture
     }
   ];
 
@@ -42,7 +50,7 @@ const CuratedSelection = () => {
             <div key={item.id} className="bg-[#141414] rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 group cursor-pointer">
               <div className="bg-[#1a1a1a] h-64 flex items-center justify-center relative overflow-hidden">
                 <img 
-                  src="https://placehold.co/600x800/1a1a1a/A69076" 
+                  src={item.image} 
                   alt={item.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

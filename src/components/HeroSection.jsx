@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import imgCar from '../assets/placeholders/capricorn-01-zagato-17 - car.webp';
+import imgSculpture from '../assets/placeholders/The shape of Speed - Limited Edition - Formula 1 - sculpture.jpg';
+import imgWatch from '../assets/placeholders/OMEGA_310.60.42.50.99.001_meteorite - watch.jpeg';
+import imgFurniture from '../assets/placeholders/UFO TAILOR MADE - furniture.webp';
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const images = [
-    "https://placehold.co/1080x1440/1a1a1a/A69076?text=Artifact+1",
-    "https://placehold.co/1080x1440/1a1a1a/A69076?text=Artifact+2",
-    "https://placehold.co/1080x1440/1a1a1a/A69076?text=Artifact+3",
-    "https://placehold.co/1080x1440/1a1a1a/A69076?text=Artifact+4",
-    "https://placehold.co/1080x1440/1a1a1a/A69076?text=Artifact+5",
-    "https://placehold.co/1080x1440/1a1a1a/A69076?text=Artifact+6"
+    imgCar,
+    imgSculpture,
+    imgWatch,
+    imgFurniture
   ];
 
   return (

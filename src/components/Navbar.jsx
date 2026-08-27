@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="bg-[#0a0a0a]/95 backdrop-blur-md border-b-[0.5px] border-[#A69076]/40 fixed w-full z-50 top-0">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8 py-3 md:py-4">
         {/* Left - Logo */}
-        <div className="flex items-center space-x-3 md:space-x-4">
+        <Link to="/" className="flex items-center space-x-3 md:space-x-4">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-white text-sm md:text-lg tracking-[0.3em] uppercase font-serif leading-tight tracking-wider antialiased">LASTRO</h1>
             <span className="text-gray-500 text-[8px] md:text-[9px] tracking-[0.3em] uppercase mt-0.5">ART / DESIGN / LUXURY</span>
           </div>
-        </div>
+        </Link>
 
         {/* Center - Links */}
         <ul className="hidden lg:flex space-x-6 xl:space-x-8">
           {['ART', 'COLLECTIBLES', 'FURNITURE', 'WATCHES', 'AUTOMOTIVE', 'MISCELLANEA'].map((item) => (
             <li key={item}>
-              <a href="#" className="text-white hover:text-[#A69076] uppercase text-xs tracking-[0.2em] transition-colors duration-300">
+              <Link to="/catalogo" className="text-white hover:text-[#A69076] uppercase text-xs tracking-[0.2em] transition-colors duration-300">
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

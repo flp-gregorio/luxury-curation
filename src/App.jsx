@@ -4,6 +4,9 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import ItemDetails from './pages/ItemDetails';
+import Auth from './pages/Auth';
+import Dashboard from './pages/Dashboard';
+import CreateItem from './pages/CreateItem';
 
 const App = () => {
   return (
@@ -14,6 +17,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<Catalog />} />
           <Route path="/peca/:id" element={<ItemDetails />} />
+          <Route path="/login" element={<Auth />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/nova-peca" element={<CreateItem />} />
         </Routes>
       </main>
     </div>

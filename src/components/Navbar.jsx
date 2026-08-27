@@ -36,9 +36,9 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </button>
-          <button className="border border-[#A69076] text-[#A69076] px-4 py-1.5 md:px-6 md:py-2 text-xs md:text-sm hover:bg-[#A69076] hover:text-black transition-colors duration-300">
+          <Link to="/login" className="border border-[#A69076] text-[#A69076] px-4 py-1.5 md:px-6 md:py-2 text-xs md:text-sm hover:bg-[#A69076] hover:text-black transition-colors duration-300">
             PRIVATE ACCESS
-          </button>
+          </Link>
           
           {/* Mobile Menu Button */}
           <button className="text-white hover:text-[#A69076] lg:hidden transition-colors duration-300">

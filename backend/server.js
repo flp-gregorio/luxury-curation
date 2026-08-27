@@ -24,7 +24,7 @@ const pecas = [
     name: 'Colar de Diamantes',
     category: 'Joias',
     price: 120000,
-    image: 'https://images.unsplash.com/photo-1599643477874-c5a8106a7102?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?q=80&w=1000&auto=format&fit=crop',
     status: 'valido',
     description: 'Colar em ouro branco 18k com diamantes cravejados em lapidação brilhante. Elegância e sofisticação em uma peça única e numerada.',
     passportId: 'LST-2026-J1234',
@@ -56,6 +56,51 @@ app.get('/api/pecas/:id', (req, res) => {
   } else {
     res.status(404).json({ message: 'Peça não encontrada' });
   }
+});
+
+// Mock Login Route
+app.post('/api/login', (req, res) => {
+  const { email, password } = req.body;
+
+  // Accept any login for MVP simulation
+  if (email && password) {
+    res.json({
+      token: 'mock-jwt-token-123',
+      user: {
+        id: '1',
+        name: 'Admin Vendedor',
+        email: email,
+        role: 'Vendedor'
+      }
+    });
+  } else {
+    res.status(401).json({ message: 'Credenciais inválidas' });
+  }
+});
+
+// Create Peca Route
+app.post('/api/pecas', (req, res) => {
+  const { name, category, price, description, image } = req.body;
+
+  if (!name || !category || !price) {
+    return res.status(400).json({ message: 'Nome, categoria e preço são obrigatórios' });
+  }
+
+  const newPeca = {
+    id: String(pecas.length + 1),
+    name,
+    category,
+    price: Number(price),
+    description,
+    image: image || 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=1000&auto=format&fit=crop',
+    status: 'em revisão', // Default status for new items
+    passportId: 'Pendente',
+    expertName: 'Pendente',
+    expertDate: 'Pendente'
+  };
+
+  pecas.push(newPeca);
+  res.status(201).json(newPeca);
 });
 
 const PORT = 3000;

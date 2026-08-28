@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import ItemDetails from './pages/ItemDetails';
 import Auth from './pages/Auth';
+import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import CreateItem from './pages/CreateItem';
 
@@ -15,6 +16,7 @@ const App = () => {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/landing" element={<Landing />} />
           <Route path="/catalogo" element={<Catalog />} />
           <Route path="/peca/:id" element={<ItemDetails />} />
           <Route path="/login" element={<Auth />} />

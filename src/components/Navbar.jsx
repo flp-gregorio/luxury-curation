@@ -9,13 +9,13 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-3 md:space-x-4">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-white text-sm md:text-lg tracking-[0.3em] uppercase font-serif leading-tight tracking-wider antialiased">LASTRO</h1>
-            <span className="text-gray-500 text-[8px] md:text-[9px] tracking-[0.3em] uppercase mt-0.5">ART / DESIGN / LUXURY</span>
+            <span className="text-gray-500 text-[8px] md:text-[9px] tracking-[0.3em] uppercase mt-0.5">ARTE / DESIGN / LUXO</span>
           </div>
         </Link>
 
         {/* Center - Links */}
         <ul className="hidden lg:flex space-x-6 xl:space-x-8">
-          {['ART', 'COLLECTIBLES', 'FURNITURE', 'WATCHES', 'AUTOMOTIVE', 'MISCELLANEA'].map((item) => (
+          {['ARTE', 'COLECIONÁVEIS', 'MOBILIÁRIO', 'RELÓGIOS', 'AUTOMOTIVO', 'DIVERSOS'].map((item) => (
             <li key={item}>
               <Link to="/catalogo" className="text-white hover:text-[#A69076] uppercase text-xs tracking-[0.2em] transition-colors duration-300">
                 {item}
@@ -37,7 +37,7 @@ const Navbar = () => {
             </svg>
           </button>
           <Link to="/login" className="border border-[#A69076] text-[#A69076] px-4 py-1.5 md:px-6 md:py-2 text-xs md:text-sm hover:bg-[#A69076] hover:text-black transition-colors duration-300">
-            PRIVATE ACCESS
+            ACESSO PRIVADO
           </Link>
           
           {/* Mobile Menu Button */}
